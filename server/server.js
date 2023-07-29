@@ -6,6 +6,9 @@ import dotenv from 'dotenv';
 import helmet from 'helmet';
 import morgan from 'morgan';
 
+// Routers
+import generalRouter from './routes/generalRoutes.js'
+
 // Configuration 
 dotenv.config()
 const app = express()
@@ -18,12 +21,11 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(cors())
 
-
+// Routes
 // app.use("/client", clientRoutes)
-// app.use("/general", generalRoutes)
+app.use("/general", generalRouter)
 // app.use("/management", managementRoutes)
 // app.use("/sales", salesRoutes)
-
 
 const PORT = process.env.PORT || 9000
 
