@@ -1,11 +1,9 @@
-import React from "react";
 import {
   LightModeOutlined,
   DarkModeOutlined,
   Menu as MenuIcon,
   Search,
   SettingsOutlined,
-  ArrowDropDownOutlined,
 } from "@mui/icons-material";
 import FlexBetween from "./flexBetween";
 import { useDispatch } from "react-redux";
@@ -19,7 +17,7 @@ import {
   IconButton,
 } from "@mui/material";
 
-export default function Navbar() {
+export default function Navbar({ isSideBarOpen, setIsSideBarOpen }) {
   const dispatch = useDispatch();
   const theme = useTheme();
   return (
@@ -37,7 +35,7 @@ export default function Navbar() {
       >
         {/* Left Side */}
         <FlexBetween>
-          <IconButton onClick={() => console.log("open/close sidebar")}>
+          <IconButton onClick={() => setIsSideBarOpen(!isSideBarOpen)}>
             <MenuIcon />
           </IconButton>
           <FlexBetween
