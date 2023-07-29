@@ -31,7 +31,7 @@ import {
 import { useState, useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import FlexBetween from "./flexBetween";
-// import borutoImage from "../assets/boruto.png";
+import borutoImage from "../assets/boruto.png";
 
 const navItems = [
   {
@@ -93,6 +93,7 @@ const navItems = [
 ];
 
 export default function Sidebar({
+  user,
   drawerWidth,
   isSideBarOpen,
   setIsSideBarOpen,
@@ -191,6 +192,18 @@ export default function Sidebar({
               })}
             </List>
           </Box>
+
+              <Box position='absolute' bottom='-12rem'>
+                <Divider />
+                <FlexBetween textTransform='none' gap='1rem' m='1.5rem 2rem 0 1.9rem'>
+                  <Box component='img' alt='profile-image' src={borutoImage} height='4rem' width='4rem' borderRadius='50%' sx={{ objectFit: 'cover' }} />
+                    <Box textAlign='left'>
+                      <Typography fontWeight='bold' fontSize='.9rem' sx={{ color: theme.palette.secondary[200] }}>
+                        { user.occupation }
+                      </Typography>
+                    </Box>
+                </FlexBetween>
+              </Box>
         </Drawer>
       )}
     </Box>
