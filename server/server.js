@@ -11,6 +11,8 @@ import generalRouter from './routes/generalRoutes.js'
 import clientRouter from './routes/clientRoutes.js';
 
 
+
+
 // Configuration 
 dotenv.config()
 const app = express()
