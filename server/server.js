@@ -8,6 +8,8 @@ import morgan from 'morgan';
 
 // Routers
 import generalRouter from './routes/generalRoutes.js'
+import clientRouter from './routes/clientRoutes.js';
+
 
 // Configuration 
 dotenv.config()
@@ -22,10 +24,10 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(cors())
 
 // Routes
-// app.use("/client", clientRoutes)
+app.use("/client", clientRouter)
 app.use("/general", generalRouter)
-// app.use("/management", managementRoutes)
-// app.use("/sales", salesRoutes)
+// app.use("/management", managementRouter)
+// app.use("/sales", salesRouter)
 
 const PORT = process.env.PORT || 9000
 
