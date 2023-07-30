@@ -1,5 +1,5 @@
 import { Box, Typography, useTheme } from "@mui/material";
-import FlexBetween from "./FlexBetween";
+import FlexBetween from "./flexBetween";
 
 export default function StatBox({ title, value, increase, icon, description  }) {
   const theme = useTheme();
