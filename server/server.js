@@ -23,7 +23,9 @@ app.use(helmet.crossOriginResourcePolicy({ policy: "cross-origin" }))
 app.use(morgan('combined'))
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))
-app.use(cors())
+app.use(cors({    
+     origin: 'https://admin-frontend-nr1r.onrender.com'
+}))
 
 // Routes
 app.use("/client", clientRouter)
