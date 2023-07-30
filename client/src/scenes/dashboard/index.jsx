@@ -1,4 +1,4 @@
-import FlexBetween from "../../components/FlexBetween";
+import FlexBetween from "../../components/flexBetween";
 import Header from "../../components/Header";
 import {
   DownloadOutlined,
