@@ -9,8 +9,8 @@ import morgan from 'morgan';
 // Routers
 import generalRouter from './routes/generalRoutes.js'
 import clientRouter from './routes/clientRoutes.js';
-
-
+import salesRouter from './routes/salesRoutes.js';
+import managementRouter from './routes/managementRoutes.js';
 
 
 // Configuration 
@@ -28,8 +28,8 @@ app.use(cors())
 // Routes
 app.use("/client", clientRouter)
 app.use("/general", generalRouter)
-// app.use("/management", managementRouter)
-// app.use("/sales", salesRouter)
+app.use("/management", managementRouter)
+app.use("/sales", salesRouter)
 
 const PORT = process.env.PORT || 9000
 

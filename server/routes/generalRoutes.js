@@ -1,8 +1,9 @@
 import express from 'express'
-import { getUser } from '../controllers/generalController.js'
+import { getDashboardStats, getUser } from '../controllers/generalController.js'
 
 const generalRouter = express.Router()
 
 generalRouter.get('/user/:id', getUser)
+generalRouter.get('/dashboard', getDashboardStats)
 
 export default generalRouter

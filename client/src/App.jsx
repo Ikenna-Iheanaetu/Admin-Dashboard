@@ -10,6 +10,12 @@ import Product from "./scenes/products";
 import Customers from "./scenes/customers";
 import Transactions from "./scenes/transactions";
 import Geography from "./scenes/geography";
+import OverView from "./scenes/overview";
+import Monthly from "./scenes/monthly";
+import Daily from "./scenes/daily";
+import Breakdown from "./scenes/breakdown";
+import Admin from "./scenes/admin";
+import Performance from "./scenes/performance";
 
 function App() {
   const mode = useSelector((state) => state.global.mode);
@@ -28,6 +34,12 @@ function App() {
               <Route path='/customers' element={<Customers />} />
               <Route path='/transactions' element={<Transactions />} />
               <Route path='/geography' element={<Geography />} />
+              <Route path='/overview' element={<OverView />} />
+              <Route path='/monthly' element={<Monthly />} />
+              <Route path='/daily' element={<Daily />} />
+              <Route path='/breakdown' element={<Breakdown />} />
+              <Route path='/admin' element={<Admin />} />
+              <Route path='/performance' element={<Performance />} />
             </Route>
           </Routes>
         </ThemeProvider>
