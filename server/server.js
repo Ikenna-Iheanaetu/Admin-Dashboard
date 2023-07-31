@@ -12,7 +12,6 @@ import clientRouter from './routes/clientRoutes.js';
 import salesRouter from './routes/salesRoutes.js';
 import managementRouter from './routes/managementRoutes.js';
 
-
 // Configuration 
 dotenv.config()
 const app = express()
